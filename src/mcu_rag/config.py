@@ -41,6 +41,12 @@ QUERY_REWRITE_ENABLED = True   # set False to skip rewriting entirely (debug)
 MULTI_QUERY_ENABLED   = True   # set False to use single-query retrieval only
 MULTI_QUERY_VARIANTS  = 2      # number of extra query variants to generate
 
+# ── Web search fallback ───────────────────────────────────────────────────────
+# When the internal RAG retrieval returns no chunks, the pipeline can perform a
+# simple web search as a last resort. Results are not added to the knowledge base
+# but can be presented to the user or used to enrich the prompt.
+WEB_SEARCH_ENABLED = True
+
 # ── Wikipedia scraping targets ────────────────────────────────────────────────
 WIKI_CHARACTERS = [
     "Iron Man", "Captain America", "Thor", "Hulk", "Black Widow",
